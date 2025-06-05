@@ -140,6 +140,7 @@ a{
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-size: 24px;
     }
 }
 
@@ -153,10 +154,14 @@ a{
 /*-------all  End-----------*/
 
 /*--------blog-content--------*/
+
+/* header 電腦版*/
 .post-header{
     display: flex;
     justify-content: center;
     gap: 24px;
+    border-top: 1px solid #6C757D;
+    border-bottom: 1px solid #6C757D;
 }
 
 .header-banner{
@@ -185,7 +190,6 @@ a{
 .font-sub-title{
     font-size: 24px;
     color: #0027D5;
-    text-align: center;
 }
 
 .label{
@@ -199,6 +203,17 @@ a{
 h1{
     font-size: 28px;
     font-weight: 700;
+}
+
+/* header pad版*/
+@media (max-width:768px) {
+    .header-banner img{
+        height: 100%;
+       }
+
+    .header-content{
+    padding: 12px 12px 12px 0;
+    }
 }
 
 /* header 手機版*/
@@ -221,14 +236,18 @@ h1{
   }
 
     .header-content{
-        display: flex;
-        flex-direction: column;
-        padding: 48px 12px;
-        width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 48px 12px;
+    width: 100%;
     }
 }
 
 /*post 電腦版*/
+.post-container{
+    border-bottom: 1px solid #6C757D;
+}
+
 .post-body{
     display: flex;
     flex-direction: column;
@@ -347,6 +366,9 @@ ul.post-desc li{
     display: flex;
 }
 
+.blog-header img{
+    height: 100%;}
+
 .header-title{
     width: 50%;
     display: flex;
@@ -415,6 +437,10 @@ ul.post-desc li{
     width: 50%;
 }
 
+.post-banner img{
+    height: 100%;
+}
+
 .new-post-content{
     width: 50%;
     display: flex;
@@ -427,6 +453,7 @@ ul.post-desc li{
     max-width: 636px;
 }
 
+/*new-post 手機版*/
 @media (max-width:375px){
   .new-post{
     display: flex;
@@ -448,7 +475,7 @@ ul.post-desc li{
 }
 }
 
-
+/*post-list 電腦版*/
 .blog-post-list{
     padding: 80px 12px;
   border-bottom: 1px solid #6C757D;
@@ -460,7 +487,7 @@ ul.post-desc li{
 }
 
 .search{
-  width: 416px;
+  max-width: 416px;
   white-space: nowrap;
   position: relative;
 }
@@ -598,7 +625,7 @@ ul.post-desc li{
 }
 
 
-
+/*post-list 手機版*/
 @media (max-width:375px){
   .blog-post-list{
     padding: 64px 12px;
@@ -634,6 +661,7 @@ ul.post-desc li{
 
 .pagination{
   width: 100%;
+  flex-wrap: wrap;
 }
 }
 
